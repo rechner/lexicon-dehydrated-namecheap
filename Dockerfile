@@ -11,4 +11,4 @@ COPY config /srv/dehydrated/
 RUN apt update \
     && apt install -y bsdmainutils \
     && apt-get clean \
-    && pip install dns-lexicon[namecheap]
+    && pip install dns-lexicon
