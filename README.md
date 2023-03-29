@@ -33,7 +33,7 @@ docker run --rm -it \
 	-e EMAIL=user+test-acc-1@example.com \
 	-e LEXICON_NAMECHEAP_USERNAME=example \
     -e LEXICON_NAMECHEAP_TOKEN=201927quien5Afei2vaem8choh0ooFah \
-	tomfun/lexicon-dehydrated-namecheap:latest \
+	ghcr.io/rechner//lexicon-dehydrated-namecheap:latest \
 	$@
 ```
 
