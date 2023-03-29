@@ -1,0 +1,22 @@
+name: Build & Push to GCR
+
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Login to packages container registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build image
+      run: |
+        docker build --tag lexicon-dehydrated-namecheap:latest .
+        docker push lexicon-dehydrated-namecheap:latest
