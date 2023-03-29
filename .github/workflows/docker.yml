@@ -19,4 +19,4 @@ jobs:
     - name: Build image
       run: |
         docker build --tag ghcr.io/rechner/lexicon-dehydrated-namecheap:latest .
-        docker push lexicon-dehydrated-namecheap:latest
+        docker push ghcr.io/rechner/lexicon-dehydrated-namecheap:latest
